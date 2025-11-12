@@ -3,6 +3,8 @@ import cors from "cors"
 import bodyParser from "body-parser"
 import authRoutes from "./routes/auth.routes.js"
 import userRoutes from "./routes/user.routes.js"
+import customerRoutes from "./routes/customer.routes.js"
+import salesRoutes from "./routes/sales.routes.js"
 
 const app = express()
 const PORT = 5000
@@ -15,11 +17,13 @@ app.get("/", (req, res) => {
 })
 
 app.use("/", authRoutes)
-
 app.use("/", userRoutes)
 
+app.use("/", customerRoutes)
+app.use("/", salesRoutes)
+
 app.listen(PORT, () =>
-    console.log(`🚀 Server running at http://localhost:${PORT}`)
+    console.log(`Server running at http://localhost:${PORT}`)
 )
 
 export default app
