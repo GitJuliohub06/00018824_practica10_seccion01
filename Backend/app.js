@@ -13,7 +13,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 app.get("/", (req, res) => {
-    res.send("Bienvenido a la API de usuarios 🧪")
+    res.send("Bienvenido a la API de usuarios")
 })
 
 app.use("/", authRoutes)

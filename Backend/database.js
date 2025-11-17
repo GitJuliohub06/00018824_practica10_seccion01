@@ -6,11 +6,11 @@ const { Pool } = pkg
 export const pool = new Pool(config.database)
 
 pool.on('connect', () => {
-  console.log('✅ Conectado a la base de datos PostgreSQL')
+  console.log('Conectado a la base de datos PostgreSQL')
 })
 
 pool.on('error', (err) => {
-  console.error('❌ Error inesperado en la base de datos:', err)
+  console.error('Error inesperado en la base de datos:', err)
   process.exit(-1)
 })
 
@@ -20,7 +20,7 @@ export const testConnection = async () => {
     console.log('🔗 Conexión a la base de datos exitosa:', result.rows[0].now)
     return true
   } catch (err) {
-    console.error('❌ Error al conectar con la base de datos:', err)
+    console.error('Error al conectar con la base de datos:', err)
     return false
   }
 }

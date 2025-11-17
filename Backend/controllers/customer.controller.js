@@ -13,6 +13,7 @@ export const getCustomers = async (req, res) => {
   }
 }
 
+//ej 4
 export const searchCustomerByCode = async (req, res) => {
   const { code } = req.query
   
